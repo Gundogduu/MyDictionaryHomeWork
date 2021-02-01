@@ -5,12 +5,13 @@ using System.Text;
 namespace MyDictionaryHomeWork
 {
     class MyDictionary<T>
-    {
-        T[] _array;       //class  cagırıldıgında direkt olusan bos liste
-        T[] _tempArray;   //gecici liste
+    {   //class  cagırıldıgında direkt olusan bos liste
+        T[] _array;
+        //gecici liste
+        T[] _tempArray;
         public MyDictionary()
-        {
-            _array = new T[0];       //constructor icinde newledik cünkü direkt calismasini istedik.
+        {   //constructor icinde newledik cünkü direkt calismasini istedik.
+            _array = new T[0];
         }
         public void Add(T item)    //item kullanıcının gönderdigi string
         { //burada _array'i geciciliste'ye aktardık.Cünkü her eleman eklendiginde bellekte yeni bir referans no alacak ve eski no'daki elemanlar kaybolacak.Bunu engellemek icin.
